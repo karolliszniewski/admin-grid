@@ -1,3 +1,20 @@
+all files
+
+```bash
+app/code/Mageplaza/HelloWorld/view/mageplaza_helloworld_post_index.xml
+app/code/Mageplaza/HelloWorld/Model/ResourceModel/Post/Collection.php
+app/code/Mageplaza/HelloWorld/Model/Post.php
+app/code/Mageplaza/HelloWorld/etc/adminhtml/menu.xml
+app/code/Mageplaza/HelloWorld/view/adminhtml/ui_component/mageplaza_helloworld_post_listing.xml
+app/code/Mageplaza/HelloWorld/view/adminhtml/layout/mageplaza_helloworld_post_index.xml
+app/code/Mageplaza/HelloWorld/etc/di.xml
+app/code/Mageplaza/HelloWorld/Controller/Adminhtml/Post/Index.php
+app/code/Mageplaza/HelloWorld/etc/adminhtml/routes.xml
+app/code/Mageplaza/HelloWorld/Setup/InstallSchema.php
+app/code/Mageplaza/HelloWorld/etc/module.xml
+app/code/Mageplaza/HelloWorld/registration.php
+```
+
 # 1. Register module
 
 file `/Mageplaza/HelloWorld/view`
