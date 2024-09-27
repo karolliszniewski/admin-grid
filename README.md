@@ -1,4 +1,4 @@
-all files
+admin page cs admin grid page
 
 ```bash
 app/code/Mageplaza/HelloWorld/view/mageplaza_helloworld_post_index.xml
@@ -13,6 +13,15 @@ app/code/Mageplaza/HelloWorld/etc/adminhtml/routes.xml
 app/code/Mageplaza/HelloWorld/Setup/InstallSchema.php
 app/code/Mageplaza/HelloWorld/etc/module.xml
 app/code/Mageplaza/HelloWorld/registration.php
+
+vs
+
+Block/Adminhtml/LandingPage.php
+Controller/Adminhtml/Index.php
+etc/adminhtml/routes.xml/menu.xml
+etc/adminhtml/acl.xml
+view/adminhtml/layout/ladiningpage_index_index.xml
+view/adminhtml/layout/templates/landingpage.phtml
 ```
 
 # 1. Register module
