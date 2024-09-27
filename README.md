@@ -311,7 +311,83 @@ file `Megeplaza/Helloworld/view/adminhtml/ui_component/megeplaza_hellloworld_pos
 </listing>
 ```
 
+file `app/code/Mageplaza/HelloWorld/etc/adminhtml/menu.xml`
 
+```xml
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Mageplaza_HelloWorld::helloworld" title="Hello World" module="Mageplaza_HelloWorld" sortOrder="51" resource="Mageplaza_HelloWorld::helloworld"/>
+        <add id="Mageplaza_HelloWorld::post" title="Manage Posts" module="Mageplaza_HelloWorld" sortOrder="10" action="mageplaza_helloworld/post" resource="Mageplaza_HelloWorld::post" parent="Mageplaza_HelloWorld::helloworld"/>
+        <add id="Mageplaza_HelloWorld::hello_configuration" title="Configuration" module="Mageplaza_HelloWorld" sortOrder="99" parent="Mageplaza_HelloWorld::helloworld" action="adminhtml/system_config/edit/section/helloworld" resource="Mageplaza_HelloWorld::helloworld_configuration"/>
+    </menu>
+</config>
+```
+
+file `app/code/Mageplaza/HelloWorld/Model/Post.php`
+
+
+```php
+<?php
+namespace Mageplaza\HelloWorld\Model\ResourceModel;
+
+
+class Post extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
+{
+	
+	public function __construct(
+		\Magento\Framework\Model\ResourceModel\Db\Context $context
+	)
+	{
+		parent::__construct($context);
+	}
+	
+	protected function _construct()
+	{
+		$this->_init('mageplaza_helloworld_post', 'post_id');
+	}
+	
+}
+```
+
+
+file `app/code/Mageplaza/HelloWorld/Model/ResourceModel/Post/Collection.php`
+
+```php
+<?php
+namespace Mageplaza\HelloWorld\Model\ResourceModel\Post;
+
+class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection
+{
+	protected $_idFieldName = 'post_id';
+	protected $_eventPrefix = 'mageplaza_helloworld_post_collection';
+	protected $_eventObject = 'post_collection';
+
+	/**
+	 * Define resource model
+	 *
+	 * @return void
+	 */
+	protected function _construct()
+	{
+		$this->_init('Mageplaza\HelloWorld\Model\Post', 'Mageplaza\HelloWorld\Model\ResourceModel\Post');
+	}
+
+}
+```
+
+file `app/code/Mageplaza/HelloWorld/view/mageplaza_helloworld_post_index.xml`
+
+```xml
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <update handle="styles"/>
+    <body>
+        <referenceContainer name="content">
+            <uiComponent name="mageplaza_helloworld_post_listing"/>
+        </referenceContainer>
+    </body>
+</page>
+```
 
 
 
