@@ -1,4 +1,4 @@
-admin page cs admin grid page
+admin page vs admin grid page
 
 ```bash
 app/code/Mageplaza/HelloWorld/view/mageplaza_helloworld_post_index.xml
