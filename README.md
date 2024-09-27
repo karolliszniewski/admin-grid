@@ -390,6 +390,8 @@ file `app/code/Mageplaza/HelloWorld/view/mageplaza_helloworld_post_index.xml`
 ```
 
 
+![image](https://github.com/user-attachments/assets/85fd8250-b2fd-408e-a473-bdf43f69f81c)
+
 
 
 
