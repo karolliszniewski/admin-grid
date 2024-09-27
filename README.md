@@ -21,7 +21,7 @@ Controller/Adminhtml/Index.php
 etc/adminhtml/routes.xml/menu.xml
 etc/adminhtml/acl.xml
 view/adminhtml/layout/ladiningpage_index_index.xml
-view/adminhtml/layout/templates/landingpage.phtml
+view/adminhtml/templates/landingpage.phtml
 ```
 
 # 1. Register module
