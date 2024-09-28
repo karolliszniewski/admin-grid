@@ -26,6 +26,8 @@ view/adminhtml/templates/landingpage.phtml
 
 # 1. Register module
 
+
+
 file `/Mageplaza/HelloWorld/registration.php`
 
 ```php
